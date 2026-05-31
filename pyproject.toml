@@ -1,7 +1,7 @@
 [project]
 name = "iconsole-plus"
 version = "0.1.0"
-description = "Add your description here"
+description = "A Python library for interacting with iConsole+ exercise equipment via Bluetooth Low Energy (BLE)"
 readme = "README.md"
 authors = [
     { name = "Christopher Smith", email = "christopher.smith@qoria.com" }
@@ -11,6 +11,20 @@ dependencies = [
     "bleak>=3.0.2",
     "bleak-retry-connector>=4.6.1",
 ]
+license = { text = "GPL-2.0-only" }
+keywords = ["bluetooth", "iconsole+", "iconsole plus", "exercise bike"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator",
+    "Framework :: AsyncIO",
+]
+
+[project.urls]
+Homepage = "https://github.com/christopher-david-smith/iconsole-plus"
+Repository = "https://github.com/christopher-david-smith/iconsole-plus"
+Issues = "https://github.com/christopher-david-smith/iconsole-plus/issues"
 
 [build-system]
 requires = ["uv_build>=0.9.9,<0.10.0"]

@@ -207,6 +207,8 @@ class IConsolePlusClient:
                     fut.cancel()
             self._pending_responses.clear()
 
+            await self.disconnect()
+
     def __aiter__(self) -> AsyncIterator[TelemetryData]:
         return self
 

@@ -1,6 +1,6 @@
 [project]
 name = "iconsole-plus"
-version = "0.1.3"
+version = "0.1.4"
 description = "A Python library for interacting with iConsole+ exercise equipment via Bluetooth Low Energy (BLE)"
 readme = "README.md"
 authors = [

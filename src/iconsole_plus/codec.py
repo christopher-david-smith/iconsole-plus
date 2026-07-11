@@ -61,11 +61,11 @@ class ProtocolCodec:
         return TelemetryData(
             duration_seconds=(data[4] - 1) * 60 + (data[5] - 1),
             speed_kmh=val(6) / 10.0,
-            power_watts=val(8),
+            power_watts=val(16) / 10.0,
             distance_km=val(10) / 10.0,
             calories_kcal=val(12),
             heart_rate_bpm=val(14),
-            cadence_rpm=val(16) / 10.0,
+            cadence_rpm=val(8),
             is_running=data[19] == 0x02,
             raw=data.hex("-").upper(),
         )

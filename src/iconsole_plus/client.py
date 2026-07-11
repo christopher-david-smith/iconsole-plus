@@ -162,6 +162,14 @@ class IConsolePlusClient:
                 self._pending_responses.pop(0xB6)
             raise
 
+    async def start_workout(self):
+        """Send the start workout command."""
+        await self._write(ProtocolCodec.encode_start())
+
+    async def stop_workout(self):
+        """Send the stop workout command."""
+        await self._write(ProtocolCodec.encode_stop())
+
     @asynccontextmanager
     async def session(self) -> AsyncIterator["IConsolePlusClient"]:
         if not self.is_connected:

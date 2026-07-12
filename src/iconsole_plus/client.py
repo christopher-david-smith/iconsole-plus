@@ -161,7 +161,15 @@ class IConsolePlusClient:
             raise
 
     async def start_workout(self):
-        """Send the start workout command."""
+        """Send the start workout command with wakeup sequence."""
+        await self._write(ProtocolCodec.encode_ping())
+        await asyncio.sleep(0.5)
+        await self._write(ProtocolCodec.encode_start())
+
+    async def reset_workout(self):
+        """Reset the workout session and start fresh."""
+        await self._write(ProtocolCodec.encode_init_packet())
+        await asyncio.sleep(0.5)
         await self._write(ProtocolCodec.encode_start())
 
     async def stop_workout(self):

@@ -111,8 +111,6 @@ class IConsolePlusClient:
         await asyncio.sleep(0.5)
         await self._write(ProtocolCodec.encode_init_packet())
         await asyncio.sleep(0.5)
-        await self._write(ProtocolCodec.encode_start())
-        await asyncio.sleep(0.5)
 
     async def _heartbeat_loop(self):
         _LOGGER.debug("Starting heartbeat loop")
